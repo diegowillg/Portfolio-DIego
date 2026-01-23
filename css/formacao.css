@@ -21,7 +21,23 @@
   background: url("../img/detalhe.svg") no-repeat center;
   position: absolute;
   bottom: -50px;
-  left: 20px;
+  left: -40px;
+}
+
+@media (max-width: 800px) {
+  .formacao-container::after {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-left: 20px;
+  }
+  .formacao-container::after {
+    font-size: 2rem;
+  }
+  .formacao-container::after {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
 }
 
 .formacao .subtitulo {
