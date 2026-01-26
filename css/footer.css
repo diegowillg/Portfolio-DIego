@@ -1,21 +1,32 @@
+/* ===== FOOTER ===== */
 .footer {
   background: #000000;
 }
 
 .footer-container {
   max-width: 1200px;
-  padding: 120px 20px 60px 20px;
+  padding: 120px 20px 60px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 100px;
-  align-items: center;
+  align-items: start;
 }
 
+/* ===== TEXTO ===== */
 .footer-texto {
   font-size: 1.5rem;
   line-height: 1.33;
   color: #cccccc;
+  max-width: 40ch;
+}
+
+/* ===== CONTATO ===== */
+.footer-contato {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; 
+  justify-content: flex-start;
 }
 
 .footer-contato li {
@@ -27,21 +38,53 @@
 }
 
 .footer-contato li a {
-  color: #ffffff;
   display: inline-block;
+  color: #ffffff;
 }
 
+/* Email e telefone em linha inteira */
+.footer-contato li:nth-child(1),
+.footer-contato li:nth-child(2) {
+  flex-basis: 100%;
+}
+
+/* Ícones lado a lado */
+.footer-contato li:nth-child(3),
+.footer-contato li:nth-child(4) {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+/* 👉 ESPAÇO SOMENTE ENTRE OS ÍCONES */
+.footer-contato li:nth-child(3) {
+  margin-right: 15px; /* ajuste fino aqui */
+}
+
+.footer-contato img {
+  width: 75px;
+  border-radius: 20px;
+}
+
+/* ===== COPYRIGHT ===== */
 .footer-copy {
   grid-column: 1 / -1;
   font-size: 1.125rem;
   color: #8f8f8f;
 }
 
+/* ===== RESPONSIVO ===== */
 @media (max-width: 800px) {
   .footer-container {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  /* ícones um pouco mais próximos no mobile */
+  .footer-contato li:nth-child(3) {
+    margin-right: 8px;
+  }
+
   .footer-contato li {
     font-size: 1.5rem;
   }
