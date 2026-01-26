@@ -11,3 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+  const btnTopo = document.querySelector('.btn-topo');
+
+  btnTopo.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
