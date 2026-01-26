@@ -53,17 +53,23 @@
 .footer-contato li:nth-child(4) {
   display: flex;
   align-items: center;
-  margin: 0;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
 }
 
 /* 👉 ESPAÇO SOMENTE ENTRE OS ÍCONES */
 .footer-contato li:nth-child(3) {
-  margin-right: 15px; /* ajuste fino aqui */
+  margin-right: 15px;
 }
 
 .footer-contato img {
-  width: 75px;
-  border-radius: 20px;
+  width: 80px;
+  height: 80px;
+  object-fit: contain; 
+  border-radius: 35px;
+  padding: 10px;
+  display: block;
 }
 
 /* ===== COPYRIGHT ===== */
