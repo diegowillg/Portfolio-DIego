@@ -8,6 +8,17 @@
   align-items: center;
 }
 
+.introducao img {
+  border-radius: 30px;
+  transition: transform 0.3s ease, border 0.3s;
+  border: 2px solid transparent;
+}
+
+.introducao img:hover {
+  transform: scale(1.05);
+  border: 2px solid #b6f829;
+}
+
 .introducao h1 {
   font-size: 4.5rem;
   line-height: 1.125;
