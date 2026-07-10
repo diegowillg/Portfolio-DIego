@@ -1,152 +1,467 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diego William</title>
+    <meta
+      name="description"
+      content="Desenvolvedor Full Stack Jr especializado em smart applications e aplicações web modernas."
+    />
+    <meta name="theme-color" content="#0f172a" />
+    <meta property="og:title" content="Diego William — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Desenvolvedor Full Stack Jr especializado em smart applications e aplicações web modernas."
+    />
+    <meta property="og:type" content="website" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diego.dev</title>
-  <meta name="description" content="Desenvolvedor Front End e UX/UI Designer Localizado em Uberaba-MG">
+    <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./img/favicon.svg" />
 
-  <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-</head>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
 
-  <header class="header">
-    <nav>
-      <ul class="header-menu">
-        <li><a href="#experiencia">Experiência</a></li>
-        <li><a href="#formacao">Formação</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="introducao">
-    <img src="./img/perfil.png" alt="Perfil" width="300" height="400">
-    <div>
-      <h1>Olá, sou Diego<br>Desenvolvedor<br>Front End &<br>UX/UI Designer</h1>
-      <p>Localizado em Uberaba-MG</p>
-    </div>
-  </main>
-
-  <section class="experiencia" id="experiencia" aria-label="Experiência">
-    <h2 class="subtitulo">Experiência</h2>
-    <div>
-
-      <div class="empresa">
-        <span class="empresa-ano">12/2025 - Atual</span>
-        <h3 class="empresa-titulo">NTT DATA</h3>
-        <span class="empresa-titulo">CJ Programador Junior</span>
-        <p class="empresa-texto">
-          Atuei na consultoria com diversas empresas, entregando todo o meu conhecimento em front-end.
-        </p>
-        <ul class="empresa-habilidades">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>UX/UI</li>
-          <li>JavaScript</li>
-          <li>Inglês</li>
-          <li>Proatividade</li>
-        </ul>
+    <header class="header">
+      <div class="header-inner">
+        <nav class="header-nav" aria-label="Navegação principal">
+          <ul class="header-menu">
+            <li>
+              <a
+                href="#experiencia"
+                class="header-link"
+                data-section="experiencia"
+                >Experiência</a
+              >
+            </li>
+            <li>
+              <a
+                href="#ferramentas"
+                class="header-link"
+                data-section="ferramentas"
+                >Ferramentas</a
+              >
+            </li>
+            <li>
+              <a href="#formacao" class="header-link" data-section="formacao"
+                >Formação</a
+              >
+            </li>
+            <li>
+              <a
+                href="#contato"
+                class="header-link header-cta"
+                data-section="contato"
+                >Contato</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
+    </header>
 
-      <div class="empresa">
-        <span class="empresa-ano">12/2023 - 11/2025</span>
-        <h3 class="empresa-titulo">Esteves Transportes</h3>
-        <span class="empresa-titulo">Gerente Geral</span>
-        <p class="empresa-texto">
-          Atuei na gerência das unidades de envios de carga para todo o Brasil.
-        </p>
-        <ul class="empresa-habilidades">
-          <li>Liderança</li>
-          <li>Analítico</li>
-          <li>Trabalho em equipe</li>
-        </ul>
+    <main class="introducao" id="inicio">
+      <div class="introducao-foto reveal">
+        <img
+          src="./img/perfil.jpg"
+          alt="Diego William"
+          width="320"
+          height="400"
+        />
       </div>
-
-    </div>
-  </section>
-
-  <section class="formacao" id="formacao" aria-label="Formação">
-    <div class="formacao-container">
-      <h2 class="subtitulo">Formação</h2>
-
-      <div>
-        <p class="formacao-texto">
-          Atualmente estou cursando o <strong>4º período</strong> de
-          <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na Uniube.
+      <div class="introducao-conteudo reveal">
+        <p class="introducao-label">
+          Dev Full Stack Jr
+          <span class="introducao-divisor" aria-hidden="true"></span>
+          Smart Applications
         </p>
+        <h1>Olá, sou <span>Diego William</span></h1>
+        <p class="introducao-texto">
+          Desenvolvedor full stack com experiência na construção de aplicações
+          web escaláveis e de alto desempenho. Atuo no desenvolvimento de smart
+          applications - soluções inteligentes que integram inteligência
+          artificial ao front-end e back-end com boas práticas de engenharia de
+          software.
+        </p>
+        <div class="introducao-acoes">
+          <a href="#contato" class="btn btn-primario">Entrar em contato</a>
+          <a
+            href="https://www.linkedin.com/in/diegowilliam096/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secundario"
+            >LinkedIn</a
+          >
+        </div>
+        <p class="introducao-local">
+          Uberaba, MG · Disponível para oportunidades
+        </p>
+      </div>
+    </main>
 
-        <ul class="faculdade-lista">
-          <li class="faculdade">
-            <span class="faculdade-tipo">Tecnólogo</span>
-            <h3 class="faculdade-curso">Análise e Desenvolvimento de Sistemas</h3>
-            <span class="faculdade-instituicao">Uniube</span>
-          </li>
-        </ul>
-
-        <div class="formacao-extra">
-          <div class="cursos">
-            <h3>Cursos</h3>
-            <ul>
-              <li>Front End Web Master <span>42h</span></li>
-              <li>Jira Kosin <span>8h</span></li>
-              <li>Kanban Pill <span>3h</span></li>
-              <li>Lean Pill <span>3h</span></li>
-              <li>Scrum Pill <span>3h</span></li>
-              <li>Lógica de Programação <span>5h</span></li>
-              <li>Produtividade para Programadores <span>3h</span></li>
-              <li>GenAI Academy: White Belt <span>1h</span></li>
-              <li>GenAI Academy: Yellow Belt <span>1h</span></li>
-              <li>KOSIN Agile Model <span>1h</span></li>
-              <li>Segurança Web <span>4h</span></li>
-            </ul>
-          </div>
-
-          <div class="idiomas">
-            <h3>Idiomas</h3>
-            <ul>
-              <li>Inglês <span>/ B2</span></li>
-              <li>Espanhol <span>/ B1</span></li>
-            </ul>
-          </div>
+    <section class="experiencia" id="experiencia" aria-label="Experiência">
+      <div class="experiencia-container">
+        <div class="secao-cabecalho reveal">
+          <h2 class="subtitulo">Experiência</h2>
+          <p class="secao-descricao">
+            Trajetória profissional com foco em desenvolvimento full stack e
+            liderança.
+          </p>
         </div>
 
+        <div class="experiencia-timeline">
+          <div class="empresa reveal">
+            <span class="empresa-ano">12/2025 — Atual</span>
+            <div class="empresa-conteudo">
+              <h3 class="empresa-nome">NTT DATA</h3>
+              <span class="empresa-cargo">Dev Full Stack Jr</span>
+              <p class="empresa-texto">
+                Desenvolvimento de smart applications e aplicações web
+                completas, atuando no front-end e back-end. Construção de
+                soluções digitais com foco em performance, escalabilidade e boas
+                práticas.
+              </p>
+              <ul class="empresa-habilidades">
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Angular</li>
+                <li>APIs</li>
+                <li>Smart Applications</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="empresa reveal">
+            <span class="empresa-ano">12/2023 — 11/2025</span>
+            <div class="empresa-conteudo">
+              <h3 class="empresa-nome">Esteves Transportes</h3>
+              <span class="empresa-cargo">Gerente Geral</span>
+              <p class="empresa-texto">
+                Gerência das unidades de envios de carga para todo o Brasil, com
+                foco em liderança de equipes, análise de processos e tomada de
+                decisão estratégica.
+              </p>
+              <ul class="empresa-habilidades">
+                <li>Liderança</li>
+                <li>Analítico</li>
+                <li>Trabalho em equipe</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer" id="contato">
-    <div class="footer-container">
-      <p class="footer-texto">Entre em contato comigo e marcamos uma conversa 👋</p>
-      <ul class="footer-contato">
-        <li>diegowill34@outlook.com</li>
-        <li>+55 (34) 92000-2258</li>
-        <li>
-          <a href="https://www.linkedin.com/in/diegowilliam096/" target="_blank">
-            <img src="./img/linkedin img portifolio.png" alt="LinkedIn">
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/diegowillg/" target="_blank">
-            <img src="./img/github.png" alt="GitHub">
-          </a>
-        </li>
-      </ul>
-      <p class="footer-copy">© 2026 - Diego William</p>
-    </div>
-  </footer>
+    <section class="ferramentas" id="ferramentas" aria-label="Ferramentas">
+      <div class="ferramentas-container">
+        <div class="secao-cabecalho reveal">
+          <h2 class="subtitulo">Ferramentas</h2>
+          <p class="secao-descricao">
+            Tecnologias e ferramentas que utilizo no dia a dia para desenvolver
+            smart applications.
+          </p>
+        </div>
 
-  <!-- BOTÃO FLUTUANTE -->
-  <a href="#" class="btn-topo" aria-label="Voltar ao topo">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
-      xmlns="http://www.w3.org/2000/svg">
-      <path d="M12 5L5 12H9V19H15V12H19L12 5Z" fill="currentColor"/>
-    </svg>
-  </a>
-  <script src="botao.js"></script>
+        <ul class="ferramentas-grid">
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>JavaScript</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>React</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>Angular</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>HTML5</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>CSS3</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>Node.js</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>Python</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>PostgreSQL</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>Docker</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>Git</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>GitHub</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>VS Code</span>
+          </li>
+          <li class="ferramenta reveal">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
+              alt=""
+              width="36"
+              height="36"
+            />
+            <span>Jira</span>
+          </li>
+          <li class="ferramenta reveal">
+            <svg
+              class="ferramenta-icone"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <rect x="3" y="4" width="5" height="16" rx="1.5" fill="#64748b" />
+              <rect
+                x="9.5"
+                y="4"
+                width="5"
+                height="10"
+                rx="1.5"
+                fill="#64748b"
+              />
+              <rect
+                x="16"
+                y="4"
+                width="5"
+                height="13"
+                rx="1.5"
+                fill="#64748b"
+              />
+            </svg>
+            <span>Kanban</span>
+          </li>
+        </ul>
+      </div>
+    </section>
 
-</body>
+    <section class="formacao" id="formacao" aria-label="Formação">
+      <div class="formacao-container">
+        <div class="secao-cabecalho reveal">
+          <h2 class="subtitulo">Formação</h2>
+          <p class="secao-descricao formacao-descricao">
+            Atualmente cursando o <strong>5º período</strong> de
+            <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na
+            Uniube.
+          </p>
+        </div>
+
+        <div class="formacao-conteudo">
+          <ul class="faculdade-lista">
+            <li class="faculdade reveal">
+              <span class="faculdade-tipo">Tecnólogo</span>
+              <h3 class="faculdade-curso">
+                Análise e Desenvolvimento de Sistemas
+              </h3>
+              <span class="faculdade-instituicao">Uniube</span>
+            </li>
+          </ul>
+
+          <div class="formacao-extra reveal">
+            <div class="cursos">
+              <h3>Cursos</h3>
+              <ul>
+                <li>React do Zero a Maestria <span>Udemy</span></li>
+                <li>Angular 19 — Curso Completo <span>Udemy</span></li>
+                <li>JavaScript Essentials 1 <span>Cisco</span></li>
+                <li>
+                  Build and Deploy Customer Experience Agents
+                  <span>Google</span>
+                </li>
+                <li>
+                  Customer Experience Agent Studio: Fundamentals
+                  <span>Google</span>
+                </li>
+                <li>Front End Web Master <span>Danki Code</span></li>
+                <li>Jira Kosin <span>NTT DATA</span></li>
+                <li>Kanban Pill <span>NTT DATA</span></li>
+                <li>Lean Pill <span>NTT DATA</span></li>
+                <li>Scrum Pill <span>NTT DATA</span></li>
+                <li>Lógica de Programação <span>Danki Code</span></li>
+                <li>
+                  Produtividade para Programadores <span>Danki Code</span>
+                </li>
+                <li>GenAI Academy: White Belt <span>NTT DATA</span></li>
+                <li>
+                  GenAI Academy: Yellow Belt Level 1 <span>NTT DATA</span>
+                </li>
+                <li>Code of Business Ethics <span>NTT DATA</span></li>
+                <li>KOSIN Agile Model <span>NTT DATA</span></li>
+                <li>Segurança Web <span>NTT DATA</span></li>
+              </ul>
+            </div>
+
+            <div class="idiomas">
+              <h3>Idiomas</h3>
+              <ul>
+                <li>Inglês <span>/ B1</span></li>
+                <li>Espanhol <span>/ B1</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer" id="contato">
+      <div class="footer-container">
+        <div class="footer-info reveal">
+          <p class="footer-texto">
+            Aberto a novas oportunidades e projetos. Vamos conversar?
+          </p>
+        </div>
+        <ul class="footer-contato">
+          <li>
+            <a href="mailto:diegowill34@outlook.com">diegowill34@outlook.com</a>
+          </li>
+          <li>
+            <a href="tel:+5534920002258">+55 (34) 92000-2258</a>
+          </li>
+          <li class="footer-social">
+            <a
+              href="https://www.linkedin.com/in/diegowilliam096/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/diegowillg/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <p class="footer-copy">
+          &copy; 2026 Diego William. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <a href="#" class="btn-topo" aria-label="Voltar ao topo">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M12 5L5 12H9V19H15V12H19L12 5Z" fill="currentColor" />
+      </svg>
+    </a>
+
+    <script src="botao.js"></script>
+  </body>
 </html>
