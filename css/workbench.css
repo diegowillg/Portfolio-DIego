@@ -427,6 +427,16 @@
   min-width: 0;
 }
 
+/* A esquerda encolhe; a direita (botão do terminal) nunca sai da tela */
+.status-grupo:first-child {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.status-grupo:last-child {
+  flex-shrink: 0;
+}
+
 .status-remoto {
   display: flex;
   align-items: center;
@@ -636,21 +646,37 @@
   /* Barra de status maior para o dedo e respeitando a borda do iPhone */
   .workbench,
   .workbench.sem-sidebar {
-    --altura-status: 32px;
+    --altura-status: 38px;
   }
 
+  /* Afasta os itens dos cantos arredondados da tela e deixa só o essencial */
   .statusbar {
-    padding-bottom: env(safe-area-inset-bottom);
+    align-items: center;
+    padding: 0 max(14px, env(safe-area-inset-right)) env(safe-area-inset-bottom) max(14px, env(safe-area-inset-left));
     font-size: 12.5px;
   }
 
+  .status-grupo {
+    align-self: stretch;
+    gap: 4px;
+  }
+
+  .status-remoto,
+  .status-extra {
+    display: none;
+  }
+
   .status-item {
-    padding: 0 10px;
+    padding: 0 8px;
   }
 
   .status-botao {
+    align-self: center;
+    height: 26px;
+    padding: 0 12px;
     color: #fff;
-    background: rgba(255, 255, 255, 0.06);
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 13px;
   }
 
   .titlebar {
@@ -658,13 +684,8 @@
   }
 
   .status-disponivel {
+    min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-}
-
-@media (max-width: 380px) {
-  .status-disponivel {
-    display: none;
   }
 }
