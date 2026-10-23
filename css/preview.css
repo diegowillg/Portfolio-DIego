@@ -195,18 +195,35 @@
   }
 
   .md-perfil {
-    flex-direction: column;
-    align-items: flex-start;
     gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 
   .md-foto {
-    width: 88px;
-    height: 88px;
+    width: 76px;
+    height: 76px;
   }
 
   .md h1 {
-    font-size: 1.75em;
+    font-size: 1.5em;
+  }
+
+  .md-sub {
+    margin: 2px 0 10px !important;
+    font-size: 0.95em;
+  }
+
+  .md h2 {
+    margin-top: 1.75em;
+    font-size: 1.25em;
+  }
+
+  .md-acoes .md-botao {
+    flex: 1 1 140px;
+    justify-content: center;
+    height: 42px;
+    font-size: 14px;
   }
 
   .md-so-desktop {

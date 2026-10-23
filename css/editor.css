@@ -214,7 +214,7 @@
 
 /* Recuo pendurado: linhas quebradas continuam alinhadas ao recuo */
 .linha-c {
-  padding-left: calc(var(--i, 0) * 1ch);
+  padding-left: calc(var(--i, 0) * var(--passo, 1ch));
   padding-right: 1.5rem;
   white-space: pre-wrap;
   overflow-wrap: anywhere;
@@ -223,9 +223,9 @@
   background-image: repeating-linear-gradient(
     to right,
     #404040 0 1px,
-    transparent 1px 2ch
+    transparent 1px calc(var(--passo, 1ch) * 2)
   );
-  background-size: calc(var(--i, 0) * 1ch) 100%;
+  background-size: calc(var(--i, 0) * var(--passo, 1ch)) 100%;
   background-repeat: no-repeat;
 }
 
@@ -290,29 +290,95 @@
   text-decoration-color: currentColor;
 }
 
+/* Celular: todas as abas visíveis, sem breadcrumb e código mais respirado */
 @media (max-width: 760px) {
-  .codigo {
-    --tamanho-codigo: 12.5px;
+  .tabs {
+    height: 40px;
+    -webkit-mask-image: linear-gradient(to right, #000 85%, transparent);
+    mask-image: linear-gradient(to right, #000 85%, transparent);
+    scroll-snap-type: x proximity;
   }
 
-  .linha {
-    grid-template-columns: 2.5rem minmax(0, 1fr);
+  .tabs::after {
+    min-width: 24px;
   }
 
-  .linha-n {
-    padding-right: 0.75rem;
+  .tab {
+    padding: 0 14px;
+    font-size: 13px;
+    scroll-snap-align: center;
   }
 
-  .linha-c {
-    padding-right: 0.75rem;
-  }
-
-  .fonte {
-    padding: 0 0.75rem 1rem;
-    font-size: 12.5px;
+  .tab-fechar {
+    display: none;
   }
 
   .breadcrumb {
-    padding: 0 10px;
+    display: none;
+  }
+
+  /* contato.sh: o botão Executar sai do breadcrumb e vira um botão flutuante */
+  .breadcrumb:has(.editor-acao) {
+    display: block;
+    position: absolute;
+    right: 12px;
+    bottom: 16px;
+    z-index: 5;
+    height: auto;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .editor:has(.painel:not([hidden])) .breadcrumb {
+    display: none;
+  }
+
+  .breadcrumb:has(.editor-acao) > :not(.editor-acao) {
+    display: none;
+  }
+
+  .editor-acao {
+    height: 40px;
+    margin: 0;
+    padding: 0 16px;
+    font-size: 14px;
+    color: #fff;
+    background: #2ea043;
+    border-radius: 20px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  }
+
+  .editor-acao:hover {
+    background: #3fb950;
+  }
+
+  .editor {
+    position: relative;
+  }
+
+  .codigo {
+    --tamanho-codigo: 13px;
+    --passo: 0.75ch;
+    padding-top: 8px;
+    line-height: 1.65;
+  }
+
+  .linha {
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    align-items: baseline;
+  }
+
+  .linha-n {
+    padding-right: 0.625rem;
+    font-size: 11px;
+  }
+
+  .linha-c {
+    padding-right: 1rem;
+  }
+
+  .fonte {
+    padding: 0.5rem 1rem 1rem;
+    font-size: 13px;
   }
 }

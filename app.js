@@ -172,8 +172,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let abertas = [];
   let ativo = null;
 
+  // No celular todos os arquivos ficam sempre visíveis como abas, para navegar sem abrir o menu
   function renderizarAbas() {
-    tabsEl.innerHTML = abertas
+    const lista = celular.matches ? arquivos.map((a) => a.id) : abertas;
+    tabsEl.innerHTML = lista
       .map((id) => {
         const a = porId[id];
         const sel = id === ativo;
@@ -183,7 +185,15 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>`;
       })
       .join("");
-    tabsEl.querySelector(".tab.ativo")?.scrollIntoView({ block: "nearest", inline: "nearest" });
+
+    // Centraliza a aba ativa sem rolar o resto da página
+    const atual = tabsEl.querySelector(".tab.ativo");
+    if (atual) {
+      tabsEl.scrollTo({
+        left: atual.offsetLeft - (tabsEl.clientWidth - atual.offsetWidth) / 2,
+        behavior: "smooth",
+      });
+    }
   }
 
   function renderizarBreadcrumb(a) {
@@ -312,6 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
   celular.addEventListener("change", () => {
     workbench.classList.remove("sidebar-aberta", "sem-sidebar");
     fundoSidebar.hidden = true;
+    renderizarAbas();
   });
 
   /* ---------- Abrir arquivo rápido (Ctrl+P) ---------- */
@@ -525,7 +536,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  saida.addEventListener("click", (e) => {
+  // Comandos clicáveis do help e atalhos rápidos (úteis no celular)
+  painel.querySelector(".painel-corpo").addEventListener("click", (e) => {
     const botao = e.target.closest("[data-cmd]");
     if (!botao) return;
     const cmd = botao.dataset.cmd;
@@ -551,7 +563,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  painel.querySelector(".painel-corpo").addEventListener("click", () => {
+  painel.querySelector(".painel-corpo").addEventListener("click", (e) => {
+    if (e.target.closest("[data-cmd]")) return;
     if (!window.getSelection().toString()) entrada.focus();
   });
 
