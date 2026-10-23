@@ -2,19 +2,24 @@
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diego William</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>README.md · Diego Gonçalves</title>
     <meta
       name="description"
-      content="Desenvolvedor Full Stack Jr especializado em smart applications e aplicações web modernas."
+      content="Diego Gonçalves, Desenvolvedor Full Stack na NTT DATA: aplicações web com React, Angular, Node.js e TypeScript, e automações com IA aplicada."
     />
-    <meta name="theme-color" content="#0f172a" />
-    <meta property="og:title" content="Diego William — Full Stack Developer" />
+    <meta name="theme-color" content="#181818" />
+    <meta property="og:title" content="Diego Gonçalves | Desenvolvedor Full Stack" />
     <meta
       property="og:description"
-      content="Desenvolvedor Full Stack Jr especializado em smart applications e aplicações web modernas."
+      content="Desenvolvedor Full Stack na NTT DATA: aplicações web com React, Angular, Node.js e TypeScript, e automações com IA aplicada."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://portfolio-diego-six.vercel.app/" />
+    <meta property="og:image" content="https://portfolio-diego-six.vercel.app/img/perfil.jpg" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="canonical" href="https://portfolio-diego-six.vercel.app/" />
 
     <link rel="icon" href="./img/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="./img/favicon.svg" />
@@ -22,446 +27,362 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/tema.css" />
+    <link rel="stylesheet" href="./css/workbench.css" />
+    <link rel="stylesheet" href="./css/editor.css" />
+    <link rel="stylesheet" href="./css/preview.css" />
+    <link rel="stylesheet" href="./css/terminal.css" />
   </head>
 
   <body>
-    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="workbench">
+      <!-- Barra de título -->
+      <header class="titlebar">
+        <button class="titlebar-menu" type="button" aria-label="Abrir explorador" aria-controls="sidebar" aria-expanded="false" data-acao="sidebar">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 3.5h12M2 8h12M2 12.5h12" /></svg>
+        </button>
+        <nav class="titlebar-itens" role="menubar" aria-label="Menu principal"></nav>
+        <button class="titlebar-busca" type="button" data-acao="quick-open">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5" /><path d="M10.5 10.5 14 14" /></svg>
+          <span>diego-goncalves</span>
+          <kbd>Ctrl P</kbd>
+        </button>
+        <div class="titlebar-direita"></div>
+      </header>
 
-    <header class="header">
-      <div class="header-inner">
-        <nav class="header-nav" aria-label="Navegação principal">
-          <ul class="header-menu">
-            <li>
-              <a
-                href="#experiencia"
-                class="header-link"
-                data-section="experiencia"
-                >Experiência</a
-              >
-            </li>
-            <li>
-              <a
-                href="#ferramentas"
-                class="header-link"
-                data-section="ferramentas"
-                >Ferramentas</a
-              >
-            </li>
-            <li>
-              <a href="#formacao" class="header-link" data-section="formacao"
-                >Formação</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contato"
-                class="header-link header-cta"
-                data-section="contato"
-                >Contato</a
-              >
-            </li>
+      <!-- Barra de atividades -->
+      <nav class="activitybar" aria-label="Barra de atividades">
+        <button type="button" class="activity-item ativo" data-acao="sidebar" title="Explorador" aria-label="Explorador">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2V7z" /><path d="M14 3v4h4" /><path d="M9 21h8a2 2 0 0 0 2-2" opacity=".55" /></svg>
+        </button>
+        <button type="button" class="activity-item" data-acao="quick-open" title="Pesquisar (Ctrl+P)" aria-label="Pesquisar arquivos">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6" /><path d="m15 15 5.5 5.5" /></svg>
+        </button>
+        <button type="button" class="activity-item" data-acao="terminal" title="Terminal (Ctrl+`)" aria-label="Abrir terminal">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="15" rx="2" /><path d="m7 10 3 2.5L7 15M12.5 15H17" /></svg>
+        </button>
+        <a class="activity-item" href="https://github.com/diegowillg" target="_blank" rel="noopener noreferrer" title="GitHub" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="5.5" r="2" /><circle cx="6" cy="18.5" r="2" /><circle cx="18" cy="8.5" r="2" /><path d="M6 7.5v9M18 10.5c0 4-6 3-11 6.5" /></svg>
+        </a>
+        <div class="activity-espaco"></div>
+        <a class="activity-item" href="https://www.linkedin.com/in/diegowilliam096/" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4.5 20.5c1.2-3.6 4-5.5 7.5-5.5s6.3 1.9 7.5 5.5" /></svg>
+        </a>
+      </nav>
+
+      <!-- Explorador -->
+      <aside class="sidebar" id="sidebar" aria-label="Explorador de arquivos">
+        <div class="sidebar-titulo">Explorador</div>
+        <details class="sidebar-secao" open>
+          <summary>Portfolio</summary>
+          <ul class="arvore">
+            <li><a href="#readme" class="arquivo" data-arquivo="readme"><span class="ic ic-md" aria-hidden="true">M↓</span>README.md</a></li>
+            <li><a href="#experiencia" class="arquivo" data-arquivo="experiencia"><span class="ic ic-ts" aria-hidden="true">TS</span>experiencia.ts</a></li>
+            <li><a href="#projetos" class="arquivo" data-arquivo="projetos"><span class="ic ic-json" aria-hidden="true">{}</span>projetos.json</a></li>
+            <li><a href="#stack" class="arquivo" data-arquivo="stack"><span class="ic ic-json" aria-hidden="true">{}</span>stack.json</a></li>
+            <li><a href="#formacao" class="arquivo" data-arquivo="formacao"><span class="ic ic-yml" aria-hidden="true">≡</span>formacao.yml</a></li>
+            <li><a href="#contato" class="arquivo" data-arquivo="contato"><span class="ic ic-sh" aria-hidden="true">$</span>contato.sh</a></li>
           </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main class="introducao" id="inicio">
-      <div class="introducao-foto reveal">
-        <img
-          src="./img/perfil.jpg"
-          alt="Diego William"
-          width="320"
-          height="400"
-        />
-      </div>
-      <div class="introducao-conteudo reveal">
-        <p class="introducao-label">
-          Dev Full Stack Jr
-          <span class="introducao-divisor" aria-hidden="true"></span>
-          Smart Applications
-        </p>
-        <h1>Olá, sou <span>Diego William</span></h1>
-        <p class="introducao-texto">
-          Desenvolvedor full stack com experiência na construção de aplicações
-          web escaláveis e de alto desempenho. Atuo no desenvolvimento de smart
-          applications - soluções inteligentes que integram inteligência
-          artificial ao front-end e back-end com boas práticas de engenharia de
-          software.
-        </p>
-        <div class="introducao-acoes">
-          <a href="#contato" class="btn btn-primario">Entrar em contato</a>
-          <a
-            href="https://www.linkedin.com/in/diegowilliam096/"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-secundario"
-            >LinkedIn</a
-          >
-        </div>
-        <p class="introducao-local">
-          Uberaba, MG · Disponível para oportunidades
-        </p>
-      </div>
-    </main>
-
-    <section class="experiencia" id="experiencia" aria-label="Experiência">
-      <div class="experiencia-container">
-        <div class="secao-cabecalho reveal">
-          <h2 class="subtitulo">Experiência</h2>
-          <p class="secao-descricao">
-            Trajetória profissional com foco em desenvolvimento full stack e
-            liderança.
-          </p>
-        </div>
-
-        <div class="experiencia-timeline">
-          <div class="empresa reveal">
-            <span class="empresa-ano">12/2025 — Atual</span>
-            <div class="empresa-conteudo">
-              <h3 class="empresa-nome">NTT DATA</h3>
-              <span class="empresa-cargo">Dev Full Stack Jr</span>
-              <p class="empresa-texto">
-                Desenvolvimento de smart applications e aplicações web
-                completas, atuando no front-end e back-end. Construção de
-                soluções digitais com foco em performance, escalabilidade e boas
-                práticas.
-              </p>
-              <ul class="empresa-habilidades">
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Angular</li>
-                <li>APIs</li>
-                <li>Smart Applications</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="empresa reveal">
-            <span class="empresa-ano">12/2023 — 11/2025</span>
-            <div class="empresa-conteudo">
-              <h3 class="empresa-nome">Esteves Transportes</h3>
-              <span class="empresa-cargo">Gerente Geral</span>
-              <p class="empresa-texto">
-                Gerência das unidades de envios de carga para todo o Brasil, com
-                foco em liderança de equipes, análise de processos e tomada de
-                decisão estratégica.
-              </p>
-              <ul class="empresa-habilidades">
-                <li>Liderança</li>
-                <li>Analítico</li>
-                <li>Trabalho em equipe</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ferramentas" id="ferramentas" aria-label="Ferramentas">
-      <div class="ferramentas-container">
-        <div class="secao-cabecalho reveal">
-          <h2 class="subtitulo">Ferramentas</h2>
-          <p class="secao-descricao">
-            Tecnologias e ferramentas que utilizo no dia a dia para desenvolver
-            smart applications.
-          </p>
-        </div>
-
-        <ul class="ferramentas-grid">
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>JavaScript</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>React</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angular/angular-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>Angular</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>HTML5</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>CSS3</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>Node.js</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>Python</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>PostgreSQL</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>Docker</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>Git</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>GitHub</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>VS Code</span>
-          </li>
-          <li class="ferramenta reveal">
-            <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg"
-              alt=""
-              width="36"
-              height="36"
-            />
-            <span>Jira</span>
-          </li>
-          <li class="ferramenta reveal">
-            <svg
-              class="ferramenta-icone"
-              width="36"
-              height="36"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <rect x="3" y="4" width="5" height="16" rx="1.5" fill="#64748b" />
-              <rect
-                x="9.5"
-                y="4"
-                width="5"
-                height="10"
-                rx="1.5"
-                fill="#64748b"
-              />
-              <rect
-                x="16"
-                y="4"
-                width="5"
-                height="13"
-                rx="1.5"
-                fill="#64748b"
-              />
-            </svg>
-            <span>Kanban</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="formacao" id="formacao" aria-label="Formação">
-      <div class="formacao-container">
-        <div class="secao-cabecalho reveal">
-          <h2 class="subtitulo">Formação</h2>
-          <p class="secao-descricao formacao-descricao">
-            Atualmente cursando o <strong>5º período</strong> de
-            <strong>Análise e Desenvolvimento de Sistemas (ADS)</strong> na
-            Uniube.
-          </p>
-        </div>
-
-        <div class="formacao-conteudo">
-          <ul class="faculdade-lista">
-            <li class="faculdade reveal">
-              <span class="faculdade-tipo">Tecnólogo</span>
-              <h3 class="faculdade-curso">
-                Análise e Desenvolvimento de Sistemas
-              </h3>
-              <span class="faculdade-instituicao">Uniube</span>
-            </li>
+        </details>
+        <details class="sidebar-secao" open>
+          <summary>Links</summary>
+          <ul class="arvore">
+            <li><a href="https://github.com/diegowillg" target="_blank" rel="noopener noreferrer" class="arquivo"><span class="ic ic-link" aria-hidden="true">↗</span>github.com/diegowillg</a></li>
+            <li><a href="https://www.linkedin.com/in/diegowilliam096/" target="_blank" rel="noopener noreferrer" class="arquivo"><span class="ic ic-link" aria-hidden="true">↗</span>linkedin/diegowilliam096</a></li>
+            <li><a href="mailto:diegowilliam096@gmail.com" class="arquivo"><span class="ic ic-link" aria-hidden="true">@</span>diegowilliam096@gmail.com</a></li>
           </ul>
+        </details>
+      </aside>
+      <div class="sidebar-fundo" data-acao="sidebar-fechar" hidden></div>
 
-          <div class="formacao-extra reveal">
-            <div class="cursos">
-              <h3>Cursos</h3>
-              <ul>
-                <li>React do Zero a Maestria <span>Udemy</span></li>
-                <li>Angular 19 — Curso Completo <span>Udemy</span></li>
-                <li>JavaScript Essentials 1 <span>Cisco</span></li>
-                <li>
-                  Build and Deploy Customer Experience Agents
-                  <span>Google</span>
-                </li>
-                <li>
-                  Customer Experience Agent Studio: Fundamentals
-                  <span>Google</span>
-                </li>
-                <li>Front End Web Master <span>Danki Code</span></li>
-                <li>Jira Kosin <span>NTT DATA</span></li>
-                <li>Kanban Pill <span>NTT DATA</span></li>
-                <li>Lean Pill <span>NTT DATA</span></li>
-                <li>Scrum Pill <span>NTT DATA</span></li>
-                <li>Lógica de Programação <span>Danki Code</span></li>
-                <li>
-                  Produtividade para Programadores <span>Danki Code</span>
-                </li>
-                <li>GenAI Academy: White Belt <span>NTT DATA</span></li>
-                <li>
-                  GenAI Academy: Yellow Belt Level 1 <span>NTT DATA</span>
-                </li>
-                <li>Code of Business Ethics <span>NTT DATA</span></li>
-                <li>KOSIN Agile Model <span>NTT DATA</span></li>
-                <li>Segurança Web <span>NTT DATA</span></li>
-              </ul>
-            </div>
+      <!-- Editor -->
+      <main class="editor" id="conteudo">
+        <div class="tabs" role="tablist" aria-label="Arquivos abertos"></div>
+        <div class="breadcrumb" aria-hidden="true"></div>
 
-            <div class="idiomas">
-              <h3>Idiomas</h3>
-              <ul>
-                <li>Inglês <span>/ B1</span></li>
-                <li>Espanhol <span>/ B1</span></li>
+        <div class="editor-corpo">
+          <!-- README.md (preview) -->
+          <section class="arquivo-conteudo" id="readme" data-nome="README.md" data-tipo="md" data-linguagem="Markdown" aria-label="README.md">
+            <article class="md">
+              <div class="md-perfil">
+                <img src="./img/perfil.jpg" alt="Foto de Diego Gonçalves" width="320" height="400" class="md-foto" />
+                <div>
+                  <h1>Diego Gonçalves</h1>
+                  <p class="md-sub">Desenvolvedor Full Stack na NTT DATA</p>
+                  <p class="md-badges">
+                    <span class="badge"><span>status</span><span class="badge-verde">disponível</span></span>
+                    <span class="badge"><span>local</span><span>Uberaba, MG</span></span>
+                    <span class="badge"><span>foco</span><span class="badge-azul">IA aplicada</span></span>
+                  </p>
+                </div>
+              </div>
+
+              <p>
+                Sou desenvolvedor full stack na <strong>NTT DATA</strong>, onde construo
+                aplicações web e soluções de automação com inteligência artificial
+                para otimizar processos de negócio.
+              </p>
+              <p>
+                Antes da tecnologia, fui gerente de logística por quase dois anos. Essa
+                experiência me deu algo que levo para cada projeto: visão de negócio,
+                liderança de equipe e foco em resultado, não apenas em código.
+              </p>
+
+              <h2>O que me motiva</h2>
+              <blockquote>
+                Transformar processos manuais em soluções inteligentes, unindo
+                desenvolvimento de software e IA para gerar impacto real nas empresas.
+              </blockquote>
+
+              <h2>Stack principal</h2>
+              <p class="md-chips">
+                <code>React</code> <code>Angular</code> <code>TypeScript</code> <code>Node.js</code>
+                <code>Python</code> <code>SQL</code> <code>OpenAI API</code> <code>LLMs</code>
+              </p>
+
+              <h2>Explore</h2>
+              <ul class="md-lista">
+                <li><a href="#experiencia" data-abrir="experiencia">experiencia.ts</a>: onde trabalhei e o que fiz</li>
+                <li><a href="#projetos" data-abrir="projetos">projetos.json</a>: projetos com código aberto</li>
+                <li><a href="#stack" data-abrir="stack">stack.json</a>: tecnologias do dia a dia</li>
+                <li><a href="#formacao" data-abrir="formacao">formacao.yml</a>: graduação, certificações e idiomas</li>
+                <li><a href="#contato" data-abrir="contato">contato.sh</a>: como falar comigo</li>
               </ul>
-            </div>
+
+              <h2 class="md-so-desktop">Atalhos</h2>
+              <table class="md-tabela md-so-desktop">
+                <tbody>
+                  <tr><td><kbd>Ctrl</kbd> + <kbd>P</kbd></td><td>Abrir arquivo pelo nome</td></tr>
+                  <tr><td><kbd>Ctrl</kbd> + <kbd>`</kbd></td><td>Abrir o terminal (tente digitar <code>help</code>)</td></tr>
+                  <tr><td><kbd>Ctrl</kbd> + <kbd>B</kbd></td><td>Mostrar ou ocultar o explorador</td></tr>
+                </tbody>
+              </table>
+
+              <p class="md-acoes">
+                <a href="#projetos" data-abrir="projetos" class="md-botao md-botao-primario">Ver projetos</a>
+                <a href="#contato" data-abrir="contato" class="md-botao">Entrar em contato</a>
+              </p>
+            </article>
+          </section>
+
+          <!-- experiencia.ts -->
+          <section class="arquivo-conteudo" id="experiencia" data-nome="experiencia.ts" data-tipo="ts" data-linguagem="TypeScript" aria-label="experiencia.ts">
+<pre class="fonte" data-lang="ts">// Experiência profissional, da mais recente para a mais antiga
+
+type Cargo = {
+  cargo: string;
+  empresa: string;
+  periodo: string;
+  local: string;
+  atividades: string[];
+  stack: string[];
+};
+
+export const experiencia: Cargo[] = [
+  {
+    cargo: "Programador Júnior · Full Stack",
+    empresa: "NTT DATA Europe &amp; Latam",
+    periodo: "dez 2025 até hoje",
+    local: "Remoto",
+    atividades: [
+      "Desenvolvimento e evolução de aplicações full stack com foco em performance, escalabilidade e qualidade.",
+      "Implementação de soluções de automação e recursos baseados em inteligência artificial para otimização de processos.",
+      "Colaboração em equipes ágeis, participando de análise, desenvolvimento, testes e implantação de soluções digitais.",
+    ],
+    stack: ["React", "Angular", "TypeScript", "Node.js", "IA aplicada", "Scrum"],
+  },
+  {
+    cargo: "Gerente de Logística",
+    empresa: "Expresso União",
+    periodo: "dez 2023 a out 2025",
+    local: "Uberaba, MG",
+    atividades: [
+      "Gerenciamento das operações logísticas da unidade, garantindo eficiência no fluxo de cargas e cumprimento dos prazos.",
+      "Coordenação de equipes, monitoramento de indicadores operacionais e otimização de processos logísticos.",
+      "Controle de movimentação de cargas, atendimento a clientes e suporte à tomada de decisões operacionais.",
+    ],
+    stack: ["Liderança", "Gestão de equipes", "Indicadores", "Processos"],
+  },
+];
+</pre>
+          </section>
+
+          <!-- projetos.json -->
+          <section class="arquivo-conteudo" id="projetos" data-nome="projetos.json" data-tipo="json" data-linguagem="JSON" aria-label="projetos.json">
+<pre class="fonte" data-lang="json">[
+  {
+    "nome": "Site de Advocacia",
+    "tipo": "Site institucional",
+    "descricao": "Site para escritório de advocacia com painel administrativo, blog, áreas de atuação, avaliações do Google e SEO.",
+    "stack": ["Next.js", "TypeScript", "Tailwind CSS"],
+    "repositorio": "github.com/diegowillg/site-advocacia"
+  },
+  {
+    "nome": "Esteves Transportes",
+    "tipo": "Site institucional",
+    "descricao": "Site de transportadora com bases, frota, serviços, FAQ e formulário de cotação sem servidor.",
+    "stack": ["React", "Vite", "JavaScript"],
+    "repositorio": "github.com/diegowillg/esteves-transportes"
+  },
+  {
+    "nome": "DevSetup",
+    "tipo": "Ferramenta",
+    "descricao": "Instalador visual para montar o ambiente de desenvolvimento no Windows: escolha as ferramentas e instale tudo de uma vez via winget.",
+    "stack": ["PowerShell", "winget"],
+    "repositorio": "github.com/diegowillg/devsetup"
+  },
+  {
+    "maisProjetos": "github.com/diegowillg?tab=repositories"
+  }
+]
+</pre>
+          </section>
+
+          <!-- stack.json -->
+          <section class="arquivo-conteudo" id="stack" data-nome="stack.json" data-tipo="json" data-linguagem="JSON" aria-label="stack.json">
+<pre class="fonte" data-lang="json">{
+  "frontEnd": [
+    "React",
+    "Angular",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Tailwind CSS",
+    "HTML",
+    "CSS"
+  ],
+  "backEnd": ["Node.js", "APIs REST", "Python"],
+  "bancoDeDados": ["SQL", "PostgreSQL"],
+  "ia": ["OpenAI API", "LLMs", "Prompt Engineering", "Agentes de IA"],
+  "devops": ["Docker", "Git", "GitHub"],
+  "gestao": ["Scrum", "Kanban", "Lean", "Jira"]
+}
+</pre>
+          </section>
+
+          <!-- formacao.yml -->
+          <section class="arquivo-conteudo" id="formacao" data-nome="formacao.yml" data-tipo="yml" data-linguagem="YAML" aria-label="formacao.yml">
+<pre class="fonte" data-lang="yml"># Formação acadêmica, certificações e idiomas
+
+graduacao:
+  curso: Análise e Desenvolvimento de Sistemas
+  instituicao: Uniube, Universidade de Uberaba
+  periodo: jun 2024 a dez 2026
+
+certificacoes:
+  - nome: OpenAI Technical Practitioner
+    emissor: OpenAI
+    ano: 2026
+  - nome: OpenAI Consultative Solutions Practitioner
+    emissor: OpenAI
+    ano: 2026
+  - nome: Build and Deploy Customer Experience Agents
+    emissor: Google
+    ano: 2026
+  - nome: "Customer Experience Agent Studio: Fundamentals"
+    emissor: Google
+    ano: 2026
+  - nome: "GenAI Academy: Yellow Belt Level 1"
+    emissor: NTT DATA
+    ano: 2025
+  - nome: "GenAI Academy: White Belt"
+    emissor: NTT DATA
+    ano: 2025
+
+cursos:
+  - React do Zero a Maestria (Udemy)
+  - "Angular 19: Curso Completo (Udemy)"
+  - EF SET English Certificate B1 (EF SET)
+  - JavaScript Essentials 1 (Cisco)
+  - Segurança Web (NTT DATA)
+  - KOSIN Agile Model (NTT DATA)
+  - Jira Kosin (NTT DATA)
+  - Scrum, Kanban e Lean Pills (NTT DATA)
+  - Code of Business Ethics (NTT DATA)
+  - Front End Web Master (Danki Code)
+  - Produtividade para Programadores (Danki Code)
+  - Lógica de Programação (Danki Code)
+
+idiomas:
+  portugues: nativo
+  ingles: B1 (EF SET)
+  espanhol: intermediário
+</pre>
+          </section>
+
+          <!-- contato.sh -->
+          <section class="arquivo-conteudo" id="contato" data-nome="contato.sh" data-tipo="sh" data-linguagem="Shell Script" aria-label="contato.sh">
+<pre class="fonte" data-lang="sh">#!/usr/bin/env bash
+# Aberto a conexões e oportunidades como Desenvolvedor Full Stack.
+# Rode este arquivo (botão ▶ acima) ou digite "contato" no terminal.
+
+EMAIL="diegowilliam096@gmail.com"
+LINKEDIN="linkedin.com/in/diegowilliam096"
+GITHUB="github.com/diegowillg"
+TELEFONE="+55 34 92000-2258"
+LOCAL="Uberaba, MG · Brasil"
+
+echo "Vamos conversar? Respondo rápido por e-mail ou LinkedIn."
+</pre>
+          </section>
+        </div>
+
+        <!-- Painel do terminal -->
+        <section class="painel" aria-label="Terminal" hidden>
+          <div class="painel-abas">
+            <span>Problemas</span>
+            <span>Saída</span>
+            <span class="ativo">Terminal</span>
+            <button type="button" class="painel-fechar" data-acao="terminal" aria-label="Fechar terminal">×</button>
           </div>
+          <div class="painel-corpo" tabindex="-1">
+            <div class="terminal-saida" aria-live="polite"></div>
+            <form class="terminal-linha" autocomplete="off">
+              <label for="terminal-entrada" class="terminal-prompt"><span class="t-verde">diego@portfolio</span>:<span class="t-azul">~</span>$</label>
+              <input id="terminal-entrada" class="terminal-entrada" type="text" spellcheck="false" autocapitalize="off" />
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <!-- Barra de status -->
+      <footer class="statusbar">
+        <div class="status-grupo">
+          <span class="status-remoto" aria-hidden="true">
+            <svg viewBox="0 0 16 16"><path d="m6 4-3 4 3 4M10 4l3 4-3 4" /></svg>
+          </span>
+          <span class="status-item">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="4.5" cy="3.5" r="1.5" /><circle cx="4.5" cy="12.5" r="1.5" /><circle cx="11.5" cy="5.5" r="1.5" /><path d="M4.5 5v6M11.5 7c0 3-4 2-7 4.5" /></svg>
+            main
+          </span>
+          <span class="status-item status-oculto-mobile">⊗ 0 ⚠ 0</span>
+          <span class="status-item status-disponivel"><span class="ponto" aria-hidden="true"></span>Disponível para oportunidades</span>
         </div>
-      </div>
-    </section>
-
-    <footer class="footer" id="contato">
-      <div class="footer-container">
-        <div class="footer-info reveal">
-          <p class="footer-texto">
-            Aberto a novas oportunidades e projetos. Vamos conversar?
-          </p>
+        <div class="status-grupo">
+          <span class="status-item status-oculto-mobile" data-status="cursor">Ln 1, Col 1</span>
+          <span class="status-item status-oculto-mobile">UTF-8</span>
+          <span class="status-item" data-status="linguagem">Markdown</span>
+          <button type="button" class="status-item status-botao" data-acao="terminal">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="m3 5 3 3-3 3M8 11h5" /></svg>
+            Terminal
+          </button>
+          <span class="status-item status-oculto-mobile">Uberaba <time class="relogio">--:--</time></span>
         </div>
-        <ul class="footer-contato">
-          <li>
-            <a href="mailto:diegowill34@outlook.com">diegowill34@outlook.com</a>
-          </li>
-          <li>
-            <a href="tel:+5534920002258">+55 (34) 92000-2258</a>
-          </li>
-          <li class="footer-social">
-            <a
-              href="https://www.linkedin.com/in/diegowilliam096/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
-                />
-              </svg>
-            </a>
-            <a
-              href="https://github.com/diegowillg/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <svg
-                width="22"
-                height="22"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                aria-hidden="true"
-              >
-                <path
-                  d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-                />
-              </svg>
-            </a>
-          </li>
-        </ul>
-        <p class="footer-copy">
-          &copy; 2026 Diego William. Todos os direitos reservados.
-        </p>
+      </footer>
+    </div>
+
+    <!-- Abrir arquivo rápido (Ctrl+P) -->
+    <div class="quick-open" role="dialog" aria-modal="true" aria-label="Abrir arquivo" hidden>
+      <div class="quick-open-caixa">
+        <input type="text" class="quick-open-entrada" placeholder="Pesquisar arquivos pelo nome" aria-label="Pesquisar arquivos" spellcheck="false" />
+        <ul class="quick-open-lista" role="listbox"></ul>
       </div>
-    </footer>
+    </div>
 
-    <a href="#" class="btn-topo" aria-label="Voltar ao topo">
-      <svg
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M12 5L5 12H9V19H15V12H19L12 5Z" fill="currentColor" />
-      </svg>
-    </a>
-
-    <script src="botao.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>

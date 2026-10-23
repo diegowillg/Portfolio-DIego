@@ -1,19 +1,22 @@
-# Portfólio – Diego William
+# Portfólio | Diego Gonçalves
 
-Site pessoal de apresentação profissional, com experiência, ferramentas, formação e contato.
+Portfólio pessoal com a interface de um editor de código, inspirado no tema Dark Modern do VS Code. Cada seção é um "arquivo": `README.md`, `experiencia.ts`, `projetos.json`, `stack.json`, `formacao.yml` e `contato.sh`.
 
 ## Destaques
 
-- Página única com navegação por seções e destaque do link ativo durante a rolagem.
-- Barra de progresso de leitura e botão "voltar ao topo".
-- Animações de entrada (reveal) ao rolar a página.
-- Layout responsivo, com estilos organizados por seção.
+- Explorador de arquivos, abas que abrem e fecham, breadcrumb e barra de status.
+- Syntax highlight próprio (TypeScript, JSON, YAML e Shell), com colchetes coloridos por profundidade e guias de indentação.
+- `Ctrl+P` abre a busca rápida de arquivos; `Ctrl+B` mostra ou oculta o explorador.
+- Terminal integrado (`` Ctrl+` ``) com comandos como `help`, `ls`, `open`, `contato` e `whoami`.
+- Cada arquivo tem sua própria URL (`#projetos`, `#contato`...), e o botão voltar do navegador funciona.
+- Todo o conteúdo está no HTML: sem JavaScript, as seções aparecem em sequência.
+- No celular, o explorador vira uma gaveta e o layout se adapta.
 
 ## Tecnologias
 
 - HTML5
-- CSS3 (um arquivo por seção em `css/`)
-- JavaScript puro (`botao.js`)
+- CSS3, sem frameworks
+- JavaScript puro (`app.js`)
 
 ## Como rodar
 
@@ -27,8 +30,13 @@ npx serve .
 
 ```
 .
-├── index.html
-├── botao.js        # navegação, progresso de rolagem e animações
-├── css/            # estilos por seção (header, experiência, ferramentas...)
-└── img/            # imagens e ícones
+├── index.html      # conteúdo de todos os "arquivos"
+├── app.js          # abas, highlight, busca rápida, terminal e relógio
+├── css/
+│   ├── tema.css       # cores, fontes e base
+│   ├── workbench.css  # barra de título, atividades, explorador e status
+│   ├── editor.css     # abas, linhas de código e cores de sintaxe
+│   ├── preview.css    # preview do README.md
+│   └── terminal.css   # painel do terminal
+└── img/            # foto e ícones
 ```
