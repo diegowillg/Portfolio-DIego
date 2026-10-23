@@ -1,0 +1,137 @@
+/* Cores baseadas no tema Dark Modern do VS Code */
+:root {
+  --fundo-editor: #1f1f1f;
+  --fundo-lateral: #181818;
+  --fundo-input: #313131;
+  --fundo-widget: #222222;
+  --borda: #2b2b2b;
+  --borda-widget: #454545;
+
+  --texto: #cccccc;
+  --texto-forte: #ffffff;
+  --texto-fraco: #9d9d9d;
+  --texto-apagado: #6e7681;
+
+  --azul: #0078d4;
+  --azul-claro: #4daafc;
+  --lista-hover: #2a2d2e;
+  --lista-ativa: #37373d;
+  --lista-foco: #04395e;
+
+  /* Sintaxe */
+  --s-keyword: #569cd6;
+  --s-controle: #c586c0;
+  --s-string: #ce9178;
+  --s-numero: #b5cea8;
+  --s-tipo: #4ec9b0;
+  --s-prop: #9cdcfe;
+  --s-funcao: #dcdcaa;
+  --s-comentario: #6a9955;
+  --s-texto: #d4d4d4;
+  --s-colchete-1: #ffd700;
+  --s-colchete-2: #da70d6;
+  --s-colchete-3: #179fff;
+
+  --fonte-ui: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Ubuntu, sans-serif;
+  --fonte-codigo: "JetBrains Mono", "Cascadia Code", Consolas, "Courier New", monospace;
+
+  --altura-titulo: 35px;
+  --altura-status: 22px;
+  --altura-abas: 35px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: var(--fonte-ui);
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--texto);
+  background: var(--fundo-editor);
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: #264f78;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
+
+svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+:focus-visible {
+  outline: 1px solid var(--azul);
+  outline-offset: -1px;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  font-family: var(--fonte-ui);
+  font-size: 11px;
+  line-height: 16px;
+  color: var(--texto);
+  background: rgba(128, 128, 128, 0.17);
+  border: 1px solid rgba(51, 51, 51, 0.6);
+  border-bottom-color: rgba(68, 68, 68, 0.6);
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(68, 68, 68, 0.6);
+}
+
+/* Barras de rolagem no estilo do editor */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(121, 121, 121, 0.4) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(121, 121, 121, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.7);
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}

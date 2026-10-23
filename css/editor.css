@@ -1,0 +1,318 @@
+.editor {
+  grid-area: editor;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  background: var(--fundo-editor);
+}
+
+/* Abas */
+.tabs {
+  display: flex;
+  flex-shrink: 0;
+  height: var(--altura-abas);
+  overflow-x: auto;
+  overflow-y: hidden;
+  background: var(--fundo-lateral);
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tabs::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid var(--borda);
+}
+
+.tab {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 0 6px 0 10px;
+  color: var(--texto-fraco);
+  background: var(--fundo-lateral);
+  border-right: 1px solid var(--borda);
+  border-bottom: 1px solid var(--borda);
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.tab:hover {
+  background: var(--fundo-editor);
+}
+
+.tab.ativo {
+  color: var(--texto-forte);
+  background: var(--fundo-editor);
+  border-bottom-color: transparent;
+}
+
+.tab.ativo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--azul);
+}
+
+.tab-nome.preview {
+  font-style: italic;
+}
+
+.tab-fechar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: inherit;
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.tab.ativo .tab-fechar,
+.tab:hover .tab-fechar,
+.tab-fechar:focus-visible {
+  opacity: 1;
+}
+
+.tab-fechar:hover {
+  background: rgba(90, 93, 94, 0.31);
+}
+
+/* Ações do editor (ex.: rodar contato.sh) */
+.editor-acao {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  margin: 0 8px 0 auto;
+  padding: 0 8px;
+  height: 24px;
+  align-self: center;
+  font-size: 12px;
+  color: #89d185;
+  background: none;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.editor-acao:hover {
+  background: rgba(90, 93, 94, 0.31);
+}
+
+.editor-acao svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 2px;
+  height: 22px;
+  padding: 0 16px;
+  font-size: 12.5px;
+  color: #a9a9a9;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.breadcrumb .ic {
+  margin-right: 2px;
+}
+
+.breadcrumb-sep {
+  margin: 0 2px;
+  color: var(--texto-apagado);
+}
+
+.editor-corpo {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Sem JavaScript tudo aparece em sequência; com JS só o arquivo ativo */
+.js .arquivo-conteudo:not(.ativo) {
+  display: none;
+}
+
+.arquivo-conteudo + .arquivo-conteudo {
+  border-top: 1px solid var(--borda);
+}
+
+.js .arquivo-conteudo + .arquivo-conteudo {
+  border-top: 0;
+}
+
+/* Código */
+.fonte {
+  margin: 0;
+  padding: 0 1.5rem 1.5rem 4rem;
+  font-family: var(--fonte-codigo);
+  font-size: 14px;
+  line-height: 22px;
+  white-space: pre-wrap;
+  color: var(--s-texto);
+}
+
+/* --zoom é alterado pelo menu Ver > Aumentar/Diminuir fonte */
+.codigo {
+  padding: 2px 0 40vh;
+  font-family: var(--fonte-codigo);
+  font-size: calc(var(--tamanho-codigo, 14px) + var(--zoom, 0px));
+  line-height: 1.5714;
+  font-variant-ligatures: contextual;
+  color: var(--s-texto);
+  counter-reset: none;
+}
+
+.linha {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  border: 1px solid transparent;
+  border-left: 0;
+  border-right: 0;
+}
+
+.linha.atual {
+  border-color: #282828;
+}
+
+.linha-n {
+  padding-right: 1.625rem;
+  text-align: right;
+  color: var(--texto-apagado);
+  user-select: none;
+  font-variant-numeric: tabular-nums;
+}
+
+.linha.atual .linha-n {
+  color: var(--texto);
+}
+
+/* Recuo pendurado: linhas quebradas continuam alinhadas ao recuo */
+.linha-c {
+  padding-left: calc(var(--i, 0) * 1ch);
+  padding-right: 1.5rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  min-height: 1.5714em;
+  /* Guias de indentação a cada 2 espaços */
+  background-image: repeating-linear-gradient(
+    to right,
+    #404040 0 1px,
+    transparent 1px 2ch
+  );
+  background-size: calc(var(--i, 0) * 1ch) 100%;
+  background-repeat: no-repeat;
+}
+
+.c-keyword {
+  color: var(--s-keyword);
+}
+
+.c-controle {
+  color: var(--s-controle);
+}
+
+.c-string {
+  color: var(--s-string);
+}
+
+.c-numero {
+  color: var(--s-numero);
+}
+
+.c-tipo {
+  color: var(--s-tipo);
+}
+
+.c-prop {
+  color: var(--s-prop);
+}
+
+.c-funcao {
+  color: var(--s-funcao);
+}
+
+.c-comentario {
+  color: var(--s-comentario);
+  font-style: italic;
+}
+
+.c-yml-chave {
+  color: var(--s-keyword);
+}
+
+.c-b1 {
+  color: var(--s-colchete-1);
+}
+
+.c-b2 {
+  color: var(--s-colchete-2);
+}
+
+.c-b3 {
+  color: var(--s-colchete-3);
+}
+
+.c-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(206, 145, 120, 0.45);
+  text-underline-offset: 3px;
+}
+
+.c-link:hover {
+  color: var(--azul-claro);
+  text-decoration-color: currentColor;
+}
+
+@media (max-width: 760px) {
+  .codigo {
+    --tamanho-codigo: 12.5px;
+  }
+
+  .linha {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+  }
+
+  .linha-n {
+    padding-right: 0.75rem;
+  }
+
+  .linha-c {
+    padding-right: 0.75rem;
+  }
+
+  .fonte {
+    padding: 0 0.75rem 1rem;
+    font-size: 12.5px;
+  }
+
+  .breadcrumb {
+    padding: 0 10px;
+  }
+}
