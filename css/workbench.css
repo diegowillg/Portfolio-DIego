@@ -569,6 +569,7 @@
   .workbench,
   .workbench.sem-sidebar {
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: var(--altura-titulo) minmax(0, 1fr) calc(var(--altura-status) + env(safe-area-inset-bottom));
     grid-template-areas:
       "titulo"
       "editor"
@@ -630,6 +631,30 @@
 
   .status-oculto-mobile {
     display: none;
+  }
+
+  /* Barra de status maior para o dedo e respeitando a borda do iPhone */
+  .workbench,
+  .workbench.sem-sidebar {
+    --altura-status: 32px;
+  }
+
+  .statusbar {
+    padding-bottom: env(safe-area-inset-bottom);
+    font-size: 12.5px;
+  }
+
+  .status-item {
+    padding: 0 10px;
+  }
+
+  .status-botao {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .titlebar {
+    padding-top: env(safe-area-inset-top);
   }
 
   .status-disponivel {

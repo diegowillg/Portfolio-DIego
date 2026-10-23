@@ -95,6 +95,11 @@
   font-weight: 700;
 }
 
+/* Atalhos de comando: só no celular, onde digitar é mais chato */
+.terminal-atalhos {
+  display: none;
+}
+
 .terminal-linha {
   display: flex;
   gap: 0.5ch;
@@ -150,6 +155,25 @@
   .painel-corpo {
     padding: 4px 12px 12px;
     font-size: 12.5px;
+  }
+
+  .terminal-atalhos {
+    display: flex;
+    gap: 6px;
+    margin: 8px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .terminal-atalhos button {
+    flex-shrink: 0;
+    height: 30px;
+    padding: 0 12px;
+    font: inherit;
+    color: #e5e510;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--borda-widget);
+    border-radius: 15px;
   }
 
   /* Evita zoom automático do iOS ao focar o campo */

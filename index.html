@@ -318,7 +318,7 @@ idiomas:
           <section class="arquivo-conteudo" id="contato" data-nome="contato.sh" data-tipo="sh" data-linguagem="Shell Script" aria-label="contato.sh">
 <pre class="fonte" data-lang="sh">#!/usr/bin/env bash
 # Aberto a conexões e oportunidades como Desenvolvedor Full Stack.
-# Rode este arquivo (botão ▶ acima) ou digite "contato" no terminal.
+# Rode este arquivo (botão ▶ Executar) ou digite "contato" no terminal.
 
 EMAIL="diegowilliam096@gmail.com"
 LINKEDIN="linkedin.com/in/diegowilliam096"
@@ -341,6 +341,13 @@ echo "Vamos conversar? Respondo rápido por e-mail ou LinkedIn."
           </div>
           <div class="painel-corpo" tabindex="-1">
             <div class="terminal-saida" aria-live="polite"></div>
+            <div class="terminal-atalhos" aria-label="Comandos rápidos">
+              <button type="button" data-cmd="help">help</button>
+              <button type="button" data-cmd="whoami">whoami</button>
+              <button type="button" data-cmd="ls">ls</button>
+              <button type="button" data-cmd="contato">contato</button>
+              <button type="button" data-cmd="clear">clear</button>
+            </div>
             <form class="terminal-linha" autocomplete="off">
               <label for="terminal-entrada" class="terminal-prompt"><span class="t-verde">diego@portfolio</span>:<span class="t-azul">~</span>$</label>
               <input id="terminal-entrada" class="terminal-entrada" type="text" spellcheck="false" autocapitalize="off" />
